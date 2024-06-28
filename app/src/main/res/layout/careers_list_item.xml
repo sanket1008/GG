@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="career"
+            type="com.unc.gearupvr.model.Careers" />
+
+        <variable
+            name="viewModel"
+            type="com.unc.gearupvr.ui.careers.CareersListViewModel" />
+
+    </data>
+
+
+    <RelativeLayout
+        android:id="@+id/parent_view"
+        android:layout_width="match_parent"
+        android:layout_height="63dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:minHeight="63dp"
+        android:onClick="@{()-> viewModel.selected(career)}"
+        android:background="@color/careers_list_item_bg"
+        >
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/logo_image_view"
+            android:layout_width="47dp"
+            android:layout_height="47dp"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="10dp"
+            android:contentDescription="@string/college_logo"
+            app:civ_border_color="@color/careers_list_item_border"
+            app:civ_border_width="1dp" />
+
+        <TextView
+            android:id="@+id/career_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/logo_image_view"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="20dp"
+            android:layout_toEndOf="@+id/logo_image_view"
+            android:ellipsize="end"
+            android:fontFamily="@font/roboto_regular"
+            android:maxLines="2"
+            android:text="@{career.career}"
+            android:textColor="@color/careers_list_item_name"
+            android:textSize="15sp" />
+
+
+    </RelativeLayout>
+
+
+</layout>

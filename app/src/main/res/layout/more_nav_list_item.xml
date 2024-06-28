@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <variable
+            name="item"
+            type="com.unc.gearupvr.model.MenuItem" />
+
+        <variable
+            name="viewModel"
+            type="com.unc.gearupvr.ui.menu.MenuViewModel" />
+
+    </data>
+
+    <RelativeLayout
+        android:id="@+id/more_nav_list_item"
+        android:layout_width="match_parent"
+        android:layout_height="66dp"
+        android:background="@color/home_background_color"
+        android:minHeight="66dp"
+        android:onClick="@{()->viewModel.moreNavigationItemSelected(item)}">
+
+
+        <ImageView
+            android:id="@+id/navigation_icon"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="27dp"
+            android:contentDescription="@string/navigation_icon"
+            android:scaleType="centerCrop"
+            android:tint="@color/more_nav_item_color" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:layout_toStartOf="@id/disclosure_indicator"
+            android:layout_toEndOf="@+id/navigation_icon"
+            android:fontFamily="@font/roboto_regular"
+            android:text="@{item.title}"
+            android:textColor="@color/more_nav_item_color"
+            android:textSize="15sp" />
+
+        <ImageView
+            android:id="@+id/disclosure_indicator"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="41dp"
+            android:contentDescription="@string/disclosure_indicator"
+            android:src="@drawable/ic_disclosure_right_24dp" />
+
+    </RelativeLayout>
+</layout>
+

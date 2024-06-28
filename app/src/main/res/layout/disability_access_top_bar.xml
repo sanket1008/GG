@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_disability_access"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="10dp"
+    android:background="@color/disability_access_header_bg"
+    android:clickable="true"
+    android:focusable="true">
+
+    <RelativeLayout
+        android:id="@+id/toolbar_layout"
+        style="@style/TopBarStyle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/back_button"
+            style="@style/TopBarBackButton"
+            android:contentDescription="@string/back_button" />
+
+        <TextView
+            android:id="@+id/nav_title"
+            style="@style/TopBarTextStyle"
+            android:layout_toEndOf="@id/back_button"
+            android:text="@string/tag_disability"
+            android:visibility="visible" />
+    </RelativeLayout>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_search"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="10dp"
+        android:animateLayoutChanges="true"
+        android:elevation="5dp"
+        android:padding="10dp"
+        app:cardBackgroundColor="@color/home_background_color"
+        app:cardCornerRadius="5dp"
+        app:cardUseCompatPadding="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar_layout">
+
+        <EditText
+            android:id="@+id/search_college"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/search_box_height"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:background="@null"
+            android:clickable="true"
+            android:drawableEnd="@drawable/ic_clear"
+            android:drawablePadding="30dp"
+            android:focusable="true"
+            android:hint="@string/tag_search_college"
+            android:imeOptions="actionDone"
+            android:importantForAutofill="no"
+            android:inputType="textWebEmailAddress"
+            android:maxLines="1"
+            android:textColor="@color/filter_sat_score_color"
+            android:textColorHint="@android:color/darker_gray"
+            android:textSize="@dimen/search_text_font_size" />
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

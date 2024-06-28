@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.unc.gearupvr.ui.visit_college_nc.filter.majorList.MajorListViewModel" />
+
+
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/major_list_bg">
+
+        <RelativeLayout
+            android:id="@+id/parent_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentBottom="true"
+
+            android:visibility="gone">
+
+            <RelativeLayout
+                android:id="@+id/top_bar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="10dp">
+
+                <ImageView
+                    android:id="@+id/back_button"
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="30dp"
+                    android:background="@drawable/ic_arrow_back"
+                    android:contentDescription="@string/tag_back_button" />
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/card_search"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_toEndOf="@id/back_button"
+                    android:elevation="5dp"
+                    app:cardBackgroundColor="@color/major_list_top_bar"
+                    app:cardCornerRadius="5dp">
+
+                    <EditText
+                        android:id="@+id/search_majors"
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        android:background="@null"
+                        android:clickable="true"
+                        android:drawableEnd="@drawable/ic_clear"
+                        android:drawablePadding="4dp"
+                        android:focusable="true"
+                        android:hint="@string/tag_search_major"
+                        android:importantForAutofill="no"
+                        android:inputType="textWebEmailAddress"
+                        android:maxLines="1"
+                        android:padding="10dp"
+                        android:text="@={viewModel.searchKey}"
+                        android:textColor="@color/filter_sat_score_color"
+                        android:textColorHint="@android:color/darker_gray"
+                        android:textSize="18sp" />
+                </androidx.cardview.widget.CardView>
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/txt_selected_number"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/top_bar"
+                android:layout_marginStart="40dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:text="@{viewModel.selectedContentsCount}"
+                android:textColor="@color/range_bar"
+                android:textSize="17sp" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_above="@+id/bottom_bar"
+                android:layout_below="@+id/txt_selected_number"
+                tools:itemCount="10"
+                tools:listitem="@layout/list_major_item" />
+
+            <LinearLayout
+                android:id="@+id/bottom_bar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:weightSum="2">
+
+                <TextView
+                    android:id="@+id/reset_button"
+                    android:layout_width="0dp"
+                    android:layout_height="80dp"
+                    android:layout_weight="1"
+                    android:background="@color/reset_button"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:text="@string/tag_reset"
+                    android:textColor="@color/apply_button_bg" />
+
+                <TextView
+                    android:id="@+id/done_button"
+                    android:layout_width="0dp"
+                    android:layout_height="80dp"
+                    android:layout_weight="1"
+                    android:background="@color/apply_button_bg"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:text="@string/tag_done"
+                    android:textColor="@color/major_screen_done" />
+
+
+            </LinearLayout>
+        </RelativeLayout>
+
+        <include
+
+            android:id="@+id/indicator_view"
+            layout="@layout/indicator_view" />
+    </RelativeLayout>
+</layout>

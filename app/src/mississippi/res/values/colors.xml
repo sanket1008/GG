@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#2D3256</color>
+    <color name="colorPrimaryDark">#2D3256</color>
+    <color name="colorAccent">#ACADB8</color>
+    <color name="high_school_popup_text_color">#676767</color>
+    <color name="high_school_text">#535353</color>
+    <color name="dashboard_tile_background">#FFFFFF</color>
+    <color name="dashboard_tile_description_text_color">#848484</color>
+    <color name="nav_bar_background">#FFFFFF</color>
+    <color name="nav_bar_selected_color">#2D3256</color>
+    <color name="nav_bar_item_color">#ACADB8</color>
+    <color name="college_list_tag_text_color">#444444</color>
+    <color name="college_list_tag_background_color">#EBEBEB</color>
+    <color name="college_list_background_color">#F6F6F6</color>
+    <color name="college_list_selection_color">#E7EFF5</color>
+    <color name="university_details_page_fab">#353E7D</color>
+    <color name="fab_border">#707070</color>
+    <color name="radio_button_txt">#919191</color>
+    <color name="black_overlay">#66000000</color>
+    <color name="divider_color">#C1C1C1</color>
+    <color name="apply_button_bg">#2E3356</color>
+    <color name="clearAll_button_bg">#777777</color>
+    <color name="edit_text_border">#929292</color>
+    <color name="reset_button">#F6F5F5</color>
+    <color name="college_item_bg">#F6F6F6</color>
+
+
+    <!-- toolbar color properties -->
+    <color name="top_bar_text_color">#FFFFFF</color>
+    <color name="top_bar_color">#002750</color>
+    <color name="error_msg_txt_color">#63C6EF</color>
+    <color name="try_again_button">#63C6EF</color>
+    <!-- home screen banner video properties -->
+    <color name="video_overlay_text_view_text_color">#96B736</color>
+    <color name="video_overlay_text_view_background">#AD000000</color>
+
+    <!-- home screen tile heading -->
+    <color name="dashboard_tile_title_text_color">#093B31</color>
+
+    <color name="college_list_title_color">#093B31</color><!-- college list title color-->
+    <!-- visit college switch selected color-->
+    <color name="switch_selected_color">#1986BD</color>
+    <color name="switch_txt_color">#fff</color>
+    <!-- nc college chip border color-->
+    <color name="chip_border_color">#D6D6D6</color>
+    <!-- nc college chip bg -->
+    <color name="chip_item_bg">#00FFFFFF</color>
+    <!-- home detail page-->
+    <color name="home_detail_page_bg">#FFFFFF</color>
+    <color name="home_detail_play_button_bg">#00000000</color>
+    <!-- disability access header -->
+    <color name="disability_access_header_bg">#FFFFFF</color>
+    <!-- home screen -->
+    <color name="home_background_color">#F6F6F6</color>
+    <color name="home_play_button_bg">#00000000</color>
+    <!-- loader -->
+    <color name="loader_color">#D9DE41</color>
+    <!-- more screen -->
+    <color name="more_screen_bg">#F6F6F6</color>
+    <color name="more_nav_item_color">#51535B</color>
+    <!-- college detail page -->
+    <color name="college_detail_page_bg">#ffffff</color>
+    <color name="college_detail_page_play_button_bg">#00000000</color>
+    <color name="follow_us_txt_color">#000</color>
+    <!-- user type-->
+    <color name="user_type_heading_color">#FFF</color>
+    <!--    user type selection screen-->
+    <color name="user_type_card_view_background">#CCFFFFFF</color><!--80%opacity-->
+    <color name="user_type_item_text_color">#000000</color>
+    <!-- high school page-->
+    <color name="high_school_heading_color">#fff</color>
+    <color name="high_school_auto_complete_bg">#00000000</color>
+    <!-- nc college list-->
+    <color name="nc_college_screen_bg">#FFF</color>
+    <color name="nc_college_list_bg">#F6F6F6</color>
+    <color name="pagination_indicator_bg">#fff</color>
+    <color name="college_list_item_img_bg">#fff</color>
+    <color name="nc_college_card_bg">#fff</color>
+    <!-- dialog box colors-->
+    <color name="dialog_box_bg">#fff</color>
+    <color name="positive_button_txt_color">#000</color>
+    <color name="negative_button_color">#000</color>
+    <color name="neutral_button_color">#000</color>
+    <!-- error page-->
+    <color name="error_page_try_again_button">#fff</color>
+    <color name="popup_item_bg">#fff</color><!--popup item bg-->
+    <color name="rounded_view_bg">#fff</color><!--rounded item bg-->
+    <!--error page-->
+    <color name="error_page_bg">#fff</color>
+    <color name="error_desc_txt_color">#000</color>
+    <!-- major list -->
+    <color name="major_list_bg">#FFF</color>
+    <color name="major_screen_done">#fff</color>
+    <color name="major_list_top_bar">#fff</color>
+    <color name="major_list_item_bg">#fff</color>
+    <!-- coming soon page-->
+    <color name="coming_soon_bg">#fff</color>
+    <color name="coming_soon_msg">#797979</color>
+    <!-- filter fragment -->
+    <color name="filter_fragment_bg">#fff</color>
+    <color name="top_bar_color_filter">#fff</color>
+    <color name="top_bar_title_color_filter">#002750</color>
+    <color name="filter_apply_button_text_color">#FFF</color>
+    <color name="filter_sat_score_color">#093B31</color>
+    <color name="filter_act_score_color">#093B31</color>
+    <color name="filter_student_body_size_color">#093B31</color>
+    <color name="range_bar">#002750</color>
+    <!-- careers list-->
+    <color name="careers_list_item_border">#002750</color>
+    <color name="careers_list_item_bg">#FFFFFF</color>
+    <color name="careers_list_bg">#F6F6F6</color>
+    <color name="careers_list_item_name">#000000</color>
+</resources>

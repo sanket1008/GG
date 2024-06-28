@@ -1,0 +1,44 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_user_details_margin">26dp</dimen>
+    <dimen name="design_bottom_navigation_text_size" tools:override="true">11sp</dimen>
+    <dimen name="design_bottom_navigation_active_text_size" tools:override="true">11sp</dimen>
+    <dimen name="dimen_entry_in_dp">230dp</dimen>
+    <dimen name="switch_text_size">15sp</dimen>
+    <dimen name="chip_text_size">12sp</dimen><!-- chip view text size -->
+    <dimen name="bottom_nav_txt_size">11sp</dimen><!-- bottom navigation text size -->
+    <dimen name="filter_button_txt_size">14sp
+    </dimen><!-- filter screen apply/clear button txt size -->
+    <dimen name="alert_dialog_button_size">12sp</dimen><!-- alert dialog button size -->
+    <dimen name="top_bar_height">67dp</dimen><!-- topbar height -->
+    <!-- top bar title properties -->
+    <dimen name="top_bar_title_text_size">17sp</dimen>
+    <dimen name="tob_bar_title_margin_top_and_end">28dp</dimen>
+    <dimen name="top_bar_title_margin_start">20dp</dimen>
+    <dimen name="top_bar_title_margin_bottom">15dp</dimen>
+    <!-- top bar back button properties -->
+    <dimen name="back_button_margin_start">22dp</dimen>
+
+    <!-- integer values -->
+    <integer name="bottom_nav_line_no">2</integer><!-- number of line for bottom nav -->
+    <dimen name="error_msg_txt_size">22sp</dimen>
+
+    <dimen name="video_placeholder_height">200dp</dimen><!-- home banner heading text size-->
+    <!-- home tile item -->
+    <dimen name="home_time_text_size">16sp</dimen>
+    <dimen name="home_tile_desc_text_size">12sp</dimen>
+
+    <!-- chip border width-->
+    <dimen name="chip_border_width">1dp</dimen>
+    <dimen name="search_text_font_size">18sp</dimen>
+    <dimen name="search_box_height">40dp</dimen>
+    <dimen name="bottom_nav_height">77dp</dimen>
+    <dimen name="user_type_heading_size">18sp</dimen>
+    <dimen name="user_type_item_height">48dp</dimen>
+    <dimen name="user_type_item_size">14sp</dimen>
+    <dimen name="high_school_heading_txt_size">18sp</dimen>
+    <dimen name="suggestion_box_height">45dp</dimen>
+    <dimen name="auto_complete_text_size">15sp</dimen>
+    <dimen name="coming_soon_msg_size">12sp</dimen>
+    <dimen name="coming_soon_heading_size">18sp</dimen>
+</resources>

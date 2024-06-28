@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <variable
+            name="item"
+            type="com.unc.gearupvr.model.UserType" />
+
+        <variable
+            name="presenter"
+            type="com.unc.gearupvr.ui.user_details.UserDetailsViewModel" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/user_type_item_height">
+
+
+        <TextView
+            android:id="@+id/userTypeTitle"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/user_type_item_height"
+            android:layout_margin="10dp"
+            android:background="@drawable/rounded_corner_bg"
+            android:drawableStart="@{item.imageRes}"
+            android:drawablePadding="20dp"
+            android:fontFamily="@font/user_type_font_family"
+            android:gravity="center_vertical"
+            android:onClick="@{()-> presenter.selected(item)}"
+            android:paddingStart="73dp"
+            android:paddingEnd="10dp"
+            android:text="@{item.title}"
+            android:textColor="@color/user_type_item_text_color"
+            android:textSize="@dimen/user_type_item_size" />
+
+    </RelativeLayout>
+</layout>

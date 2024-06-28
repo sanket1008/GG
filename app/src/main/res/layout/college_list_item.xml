@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="college"
+            type="com.unc.gearupvr.model.College" />
+
+    </data>
+
+
+    <RelativeLayout
+        android:id="@+id/parent_view"
+        android:layout_width="match_parent"
+        android:layout_height="110dp"
+        android:background="@color/college_item_bg"
+        android:minHeight="110dp"
+        app:layout_constraintWidth_default="spread">
+
+        <ImageView
+            android:id="@+id/logo_image_view"
+            android:layout_width="110dp"
+            android:layout_height="80dp"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="10dp"
+            android:background="@color/college_list_item_img_bg"
+            android:src="@drawable/default_tile_icon"
+            android:contentDescription="@string/college_logo"
+            android:scaleType="centerInside"
+            android:adjustViewBounds="true"
+            />
+
+        <TextView
+            android:id="@+id/college_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/logo_image_view"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="20dp"
+            android:layout_toEndOf="@+id/logo_image_view"
+            android:ellipsize="end"
+            android:fontFamily="@font/roboto_regular"
+            android:maxLines="2"
+            android:text="@{college.name}"
+            android:textColor="@color/college_list_title_color"
+            android:textSize="15sp" />
+
+        <com.google.android.material.chip.ChipGroup
+            android:id="@+id/chip_group"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/college_name"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="10dp"
+            android:layout_toStartOf="@id/next_button"
+            android:layout_toEndOf="@+id/logo_image_view"
+            android:enabled="false"
+            app:singleLine="false"
+            app:singleSelection="true" />
+
+
+        <ImageView
+            android:id="@+id/next_button"
+            android:layout_width="wrap_content"
+            android:layout_height="110dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="10dp"
+            android:contentDescription="@string/navigation_button_for_the_next_screen"
+            android:padding="10dp"
+            android:src="@drawable/ic_next" />
+
+    </RelativeLayout>
+
+
+</layout>

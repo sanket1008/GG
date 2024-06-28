@@ -1,0 +1,175 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <!--Theme.AppCompat.Light.NoActionBar-->
+    <style name="AppTheme" parent="Theme.MaterialComponents.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+
+
+    </style>
+
+    <style name="Theme.Transparent" parent="@style/Theme.AppCompat.NoActionBar">
+      <!--  <item name="android:windowIsTranslucent">true</item> -->
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:backgroundDimEnabled">false</item>
+    </style>
+
+    <style name="SwitchTextAppearance" parent="@android:style/TextAppearance.Holo.Small">
+        <item name="android:textColor">@color/switch_txt_color</item>
+        <item name="android:textSize">@dimen/switch_text_size</item>
+        <item name="android:fontFamily">@font/roboto_regular</item>
+    </style>
+
+    <style name="ChipTextAppearance" parent="@style/AppTheme">
+        <item name="android:textSize">@dimen/chip_text_size</item>
+        <item name="android:textColor">@color/college_list_tag_text_color</item>
+        <item name="android:fontFamily">@font/roboto_regular</item>
+    </style>
+
+
+    <style name="BottomNavigationViewStyle" parent="Widget.MaterialComponents.BottomNavigationView">
+        <item name="itemTextAppearanceActive">@style/BottomNavigationViewStyle.TextAppearance</item>
+        <item name="itemTextAppearanceInactive">@style/BottomNavigationViewStyle.TextAppearance
+        </item>
+    </style>
+
+    <style name="BottomNavigationViewStyle.TextAppearance" parent="TextAppearance.MaterialComponents.Caption">
+        <item name="android:textSize">@dimen/bottom_nav_txt_size</item>
+        <item name="fontFamily">@font/roboto_regular</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:lines">@integer/bottom_nav_line_no</item>
+        <item name="android:ellipsize">end</item>
+
+    </style>
+
+    <style name="FullscreenTheme" parent="AppTheme">
+        <item name="android:actionBarStyle">@style/FullscreenActionBarStyle</item>
+        <item name="android:windowActionBarOverlay">true</item>
+        <item name="android:windowBackground">@null</item>
+        <item name="metaButtonBarStyle">?android:attr/buttonBarStyle</item>
+        <item name="metaButtonBarButtonStyle">?android:attr/buttonBarButtonStyle</item>
+    </style>
+
+    <style name="FullscreenActionBarStyle" parent="Widget.AppCompat.ActionBar">
+        <item name="android:background">@color/black_overlay</item>
+    </style>
+
+    <style name="VrTheme" parent="android:Theme.Material" />
+
+    <style name="ApplyButtonStyle" parent="ThemeOverlay.AppCompat">
+        <item name="android:textSize">@dimen/filter_button_txt_size</item>
+        <item name="android:textColor">@color/filter_apply_button_text_color</item>
+        <item name="colorAccent">@color/apply_button_bg</item>
+
+    </style>
+
+    <style name="ClearAllButtonStyle" parent="ThemeOverlay.AppCompat">
+        <item name="android:textSize">@dimen/filter_button_txt_size</item>
+        <item name="android:textColor">@color/clearAll_button_bg</item>
+        <item name="colorAccent">@android:color/transparent</item>
+
+    </style>
+
+    <style name="CustomDialogTheme" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <item name="android:background">@color/dialog_box_bg</item>
+        <item name="android:windowTitleStyle">@style/DialogTitleTextStyle</item>
+        <item name="android:buttonBarPositiveButtonStyle">@style/PositiveButtonStyle</item>
+        <item name="android:buttonBarNegativeButtonStyle">@style/NegativeButtonStyle</item>
+        <item name="android:buttonBarNeutralButtonStyle">@style/NegativeButtonStyle</item>
+
+    </style>
+
+    <style name="PositiveButtonStyle" parent="Widget.MaterialComponents.Button.TextButton.Dialog">
+        <item name="android:textColor">@color/positive_button_txt_color</item>
+        <item name="android:textSize">@dimen/alert_dialog_button_size</item>
+        <item name="rippleColor">#a4a4a4</item>
+    </style>
+
+    <style name="NegativeButtonStyle" parent="Widget.MaterialComponents.Button.TextButton.Dialog">
+        <item name="android:textColor">@color/negative_button_color</item>
+        <item name="android:textSize">@dimen/alert_dialog_button_size</item>
+        <item name="rippleColor">#a4a4a4</item>
+    </style>
+
+    <style name="Alert.Button.Neutral" parent="Widget.MaterialComponents.Button.TextButton.Dialog">
+        <item name="backgroundTint">@android:color/transparent</item>
+        <item name="rippleColor">@color/colorAccent</item>
+        <item name="android:textColor">@color/neutral_button_color</item>
+        <item name="android:textSize">@dimen/alert_dialog_button_size</item>
+    </style>
+
+    <style name="DialogTitleTextStyle">
+        <item name="android:textColor">@color/design_default_color_primary</item>
+        <item name="android:textAppearance">@style/TextAppearance.AppCompat.Title</item>
+    </style>
+
+    <style name="TopBarStyle" parent="@android:style/Widget">
+        <item name="android:layout_height">@dimen/top_bar_height</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:background">@color/top_bar_color</item>
+        <item name="android:layout_alignParentTop">true</item>
+
+    </style>
+
+    <style name="FilterTopBarStyle" parent="@android:style/Widget">
+        <item name="android:layout_height">@dimen/top_bar_height</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:background">@color/top_bar_color_filter</item>
+        <item name="android:layout_alignParentTop">true</item>
+
+    </style>
+
+
+    <style name="TopBarTextStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginStart">@dimen/top_bar_title_margin_start</item>
+        <item name="android:layout_marginTop">@dimen/tob_bar_title_margin_top_and_end</item>
+        <item name="android:layout_marginEnd">@dimen/tob_bar_title_margin_top_and_end</item>
+        <item name="android:layout_marginBottom">@dimen/top_bar_title_margin_bottom</item>
+        <item name="android:textAlignment">textStart</item>
+        <item name="android:textColor">@color/top_bar_text_color</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:textSize">@dimen/top_bar_title_text_size</item>
+    </style>
+
+    <style name="FilterTopBarTextStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginStart">@dimen/top_bar_title_margin_start</item>
+        <item name="android:layout_marginTop">@dimen/tob_bar_title_margin_top_and_end</item>
+        <item name="android:layout_marginEnd">@dimen/tob_bar_title_margin_top_and_end</item>
+        <item name="android:layout_marginBottom">@dimen/top_bar_title_margin_bottom</item>
+        <item name="android:textAlignment">textStart</item>
+        <item name="android:textColor">@color/top_bar_title_color_filter</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:textSize">@dimen/top_bar_title_text_size</item>
+    </style>
+
+    <style name="TopBarBackButton">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginStart">@dimen/back_button_margin_start</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:contentDescription">@string/back_button</item>
+        <item name="android:src">@drawable/ic_arrow_back</item>
+
+    </style>
+
+    <style name="TryAgainButtonStyle.ButtonStyle" parent="ThemeOverlay.AppCompat">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/error_page_try_again_button</item>
+        <item name="textAllCaps">false</item>
+        <item name="colorAccent">@color/try_again_button</item>
+
+    </style>
+
+
+</resources>

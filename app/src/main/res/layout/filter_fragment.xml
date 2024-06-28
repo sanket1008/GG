@@ -1,0 +1,344 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:grid="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.unc.gearupvr.ui.visit_college_nc.VisitCollegeNCViewModel" />
+
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/filter_fragment_bg">
+
+
+        <RelativeLayout
+            android:id="@+id/toolbar_layout"
+            style="@style/FilterTopBarStyle">
+
+            <TextView
+                android:id="@+id/nav_title"
+                style="@style/FilterTopBarTextStyle"
+                android:layout_alignParentStart="true"
+                android:layout_toStartOf="@id/close_filter"
+                android:text="@string/tag_filter_by"
+                android:visibility="visible" />
+
+
+            <ImageView
+                android:id="@+id/close_filter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="28dp"
+                android:layout_marginEnd="30dp"
+                android:background="@drawable/ic_clear"
+                android:contentDescription="@string/dec_close_button" />
+
+
+        </RelativeLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/toolbar_layout">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:ignore="ScrollViewSize">
+
+
+                <com.unc.gearupvr.components.RadioGridGroup
+                    android:id="@+id/radio_grp_state_type"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginTop="33dp"
+                    android:layout_marginEnd="20dp"
+                    android:orientation="horizontal"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    grid:columnCount="2">
+
+                    <RadioButton
+                        android:id="@+id/radio_button_inState"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:button="@drawable/radio_button_selector"
+                        android:paddingStart="5dp"
+                        android:paddingEnd="1dp"
+                        android:text="@string/radio_tag_in_state"
+                        android:textColor="@color/radio_button_txt"
+                        app:layout_columnWeight="1" />
+
+                    <RadioButton
+                        android:id="@+id/radio_button_outState"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:button="@drawable/radio_button_selector"
+                        android:paddingStart="5dp"
+                        android:paddingEnd="1dp"
+                        android:text="@string/radio_tag_out_of_state"
+                        android:textColor="@color/radio_button_txt"
+                        app:layout_columnWeight="1" />
+
+                </com.unc.gearupvr.components.RadioGridGroup>
+
+                <TextView
+                    android:id="@+id/txt_sat_score"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginTop="20dp"
+                    android:text="@string/tag_sat_score"
+                    android:textColor="@color/filter_sat_score_color"
+                    android:textSize="15sp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/radio_grp_state_type" />
+
+                <com.jaygoo.widget.RangeSeekBar
+                    android:id="@+id/sat_rangeBar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/txt_sat_score"
+                    app:rsb_indicator_background_color="@color/white_transparent"
+                    app:rsb_indicator_height="20dp"
+                    app:rsb_indicator_margin="2dp"
+                    app:rsb_indicator_show_mode="alwaysShow"
+                    app:rsb_indicator_text_color="@color/fab_border"
+                    app:rsb_indicator_width="20dp"
+                    app:rsb_min_interval="1"
+                    app:rsb_mode="range"
+                    app:rsb_progress_color="@color/range_bar"
+                    app:rsb_progress_default_color="@color/fab_border"
+                    app:rsb_progress_height="2dp"
+                    app:rsb_thumb_drawable="@drawable/progress_thumb_circle"
+                    app:rsb_thumb_scale_ratio="1.2"
+                    app:rsb_tick_mark_layout_gravity="bottom"
+                    app:rsb_tick_mark_mode="number"
+                    app:rsb_tick_mark_text_margin="15dp" />
+
+                <TextView
+                    android:id="@+id/txt_act_score"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginTop="20dp"
+                    android:text="@string/tag_act_score"
+                    android:textColor="@color/filter_act_score_color"
+                    android:textSize="15sp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/sat_rangeBar" />
+
+                <com.jaygoo.widget.RangeSeekBar
+                    android:id="@+id/act_rangeBar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/txt_act_score"
+                    app:rsb_indicator_background_color="@color/white_transparent"
+                    app:rsb_indicator_height="20dp"
+                    app:rsb_indicator_margin="2dp"
+                    app:rsb_indicator_show_mode="alwaysShow"
+                    app:rsb_indicator_text_color="@color/fab_border"
+                    app:rsb_indicator_width="20dp"
+                    app:rsb_min_interval="1"
+                    app:rsb_mode="range"
+                    app:rsb_progress_color="@color/range_bar"
+                    app:rsb_progress_default_color="@color/fab_border"
+                    app:rsb_progress_height="2dp"
+                    app:rsb_thumb_drawable="@drawable/progress_thumb_circle"
+                    app:rsb_thumb_scale_ratio="1.2"
+                    app:rsb_tick_mark_layout_gravity="bottom"
+                    app:rsb_tick_mark_mode="number"
+                    app:rsb_tick_mark_text_margin="15dp" />
+
+                <View
+                    android:id="@+id/first_divider"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@color/divider_color"
+                    app:layout_constraintTop_toBottomOf="@id/act_rangeBar" />
+
+                <TextView
+                    android:id="@+id/txt_majors_tag"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="15dp"
+                    android:text="@string/tag_majors"
+                    android:textAlignment="textStart"
+                    android:textColor="@color/filter_sat_score_color"
+                    android:textSize="15sp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/first_divider" />
+
+                <TextView
+                    android:id="@+id/txt_selected_tag"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="5dp"
+                    android:text="@string/tag_0_selected"
+                    android:textColor="@color/dashboard_tile_description_text_color"
+                    android:textSize="13sp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/txt_majors_tag" />
+
+                <ImageView
+                    android:id="@+id/img_select_majors"
+                    android:layout_width="27dp"
+                    android:layout_height="27dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginEnd="20dp"
+                    android:contentDescription="@string/desc_major_select_icon"
+                    android:src="@drawable/ic_more"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/first_divider" />
+
+                <View
+                    android:id="@+id/second_divider"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@color/divider_color"
+                    app:layout_constraintTop_toBottomOf="@id/img_select_majors" />
+
+                <TextView
+                    android:id="@+id/txt_student_body_size"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginBottom="10dp"
+                    android:text="@string/tag_student_body_size"
+                    android:textColor="@color/filter_student_body_size_color"
+                    android:textSize="15sp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/second_divider" />
+
+                <TextView
+                    android:id="@+id/clear_student_body_size"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginEnd="10dp"
+                    android:text="@string/tag_clear"
+                    android:textColor="@color/dashboard_tile_description_text_color"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/second_divider" />
+
+                <com.unc.gearupvr.components.RadioGridGroup
+                    android:id="@+id/radio_grp_student_size"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="20dp"
+                    grid:columnCount="2"
+                    grid:layout_constraintLeft_toLeftOf="parent"
+                    grid:layout_constraintRight_toRightOf="parent"
+                    grid:layout_constraintTop_toBottomOf="@id/txt_student_body_size"
+                    grid:useDefaultMargins="true">
+
+
+                </com.unc.gearupvr.components.RadioGridGroup>
+
+                <View
+                    android:id="@+id/third_divider"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@color/divider_color"
+                    app:layout_constraintTop_toBottomOf="@id/radio_grp_student_size" />
+
+                <TextView
+                    android:id="@+id/txt_cost_per_year"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="15dp"
+                    android:text="@string/tag_cost_per_year"
+                    android:textColor="@color/filter_sat_score_color"
+                    android:textSize="15sp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/third_divider" />
+
+                <com.jaygoo.widget.RangeSeekBar
+                    android:id="@+id/cost_rangeBar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/txt_cost_per_year"
+                    app:rsb_indicator_background_color="@color/white_transparent"
+                    app:rsb_indicator_height="20dp"
+                    app:rsb_indicator_margin="2dp"
+                    app:rsb_indicator_show_mode="alwaysShow"
+                    app:rsb_indicator_text_color="@color/fab_border"
+                    app:rsb_indicator_width="20dp"
+                    app:rsb_min_interval="1"
+                    app:rsb_mode="range"
+                    app:rsb_progress_color="@color/range_bar"
+                    app:rsb_progress_default_color="@color/fab_border"
+                    app:rsb_progress_height="2dp"
+                    app:rsb_thumb_drawable="@drawable/progress_thumb_circle"
+                    app:rsb_thumb_scale_ratio="1.2"
+                    app:rsb_tick_mark_layout_gravity="bottom"
+                    app:rsb_tick_mark_mode="number"
+                    app:rsb_tick_mark_text_margin="15dp" />
+
+                <Button
+                    android:id="@+id/button_apply"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="35dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginBottom="20dp"
+                    android:background="@color/colorPrimary"
+                    android:text="@string/tag_apply_filters"
+                    android:theme="@style/ApplyButtonStyle"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/cost_rangeBar" />
+
+                <TextView
+                    android:id="@+id/clear_all"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dp"
+                    android:padding="15dp"
+                    android:text="@string/tag_clear_all"
+                    android:textColor="@color/clearAll_button_bg"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintRight_toLeftOf="@id/button_apply" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </ScrollView>
+
+        <FrameLayout
+            android:id="@+id/content"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentBottom="true" />
+    </RelativeLayout>
+</layout>

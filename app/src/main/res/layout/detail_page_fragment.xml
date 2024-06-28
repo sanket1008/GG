@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/toolbar_layout"
+            style="@style/TopBarStyle"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/back_button"
+                style="@style/TopBarBackButton"
+                android:contentDescription="@string/back_button" />
+
+            <TextView
+                android:id="@+id/title"
+                style="@style/TopBarTextStyle"
+                android:layout_toEndOf="@id/back_button" />
+        </RelativeLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/toolbar_layout"
+            android:background="@color/home_detail_page_bg">
+
+            <androidx.constraintlayout.widget.ConstraintLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/navigation_custom_page"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:clickable="true"
+                android:focusable="true"
+                android:orientation="vertical">
+
+
+                <ImageView
+                    android:id="@+id/video_thumb"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/video_placeholder_height"
+                    android:adjustViewBounds="false"
+                    android:contentDescription="@string/dashboard_title"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/video_placeholder"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:visibility="gone"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageButton
+                    android:id="@+id/play_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@color/home_detail_play_button_bg"
+                    android:contentDescription="@string/play_button"
+                    android:visibility="gone"
+                    android:src="@drawable/ic_play_circle_outline"
+                    app:layout_constraintBottom_toBottomOf="@+id/video_thumb"
+                    app:layout_constraintEnd_toEndOf="@+id/video_thumb"
+                    app:layout_constraintStart_toStartOf="@+id/video_thumb"
+                    app:layout_constraintTop_toTopOf="@+id/video_thumb" />
+
+                <WebView
+                    android:id="@+id/web_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/video_thumb" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </ScrollView>
+
+        <include
+            android:id="@+id/indicator_view"
+            layout="@layout/indicator_view"
+            android:visibility="visible"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="-50dp" />
+
+    </RelativeLayout>
+</layout>
